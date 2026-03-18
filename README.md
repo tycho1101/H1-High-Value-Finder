@@ -1,16 +1,17 @@
-# H1-Bounty-Inventory-Downloader
+# H1-High-Value-Finder
 
-A lightweight, automated script for Bug Bounty Hunters to download their entire HackerOne program inventory. It specifically focuses on **BBP (Bounty Programs)** and automatically separates Public and Private invites.
+A simple, aggressive script to extract **High-Paying** and **Fast-Responding** program handles from your HackerOne account.
 
-## 🌟 Key Features
-- **Bypass Pagination**: Automatically crawls through 600+ programs using GraphQL cursors.
-- **Private Program Detection**: Identifies and separates your private invites from public programs.
-- **Automation Ready**: Exports clean `.txt` handle lists ready to be piped into tools like `subfinder`, `httpx`, or `nuclei`.
-- **WAF Friendly**: Mimics browser headers and includes CSRF token validation to prevent session blocking.
+## What it does
+It crawls your entire H1 inventory (Public/Private) and filters targets based on:
+1. **The Money**: Only programs with high average bounties.
+2. **The Speed**: Only programs with fast initial response times.
+3. **The Status**: Separates Private invites from Public BBP.
 
-## 🚀 Quick Start
-
-1. **Clone the repository:**
+## Usage
+1. **Config**: Paste your session `Cookie` and `X-Csrf-Token` into the `.env` file.
+2. **Filter**: Set your minimum bounty and response time thresholds.
+3. **Run**: 
    ```bash
-   git clone [https://github.com/your-username/h1-inventory-downloader.git](https://github.com/your-username/h1-inventory-downloader.git)
-   cd h1-inventory-downloader
+   python h1_downloader.py
+4. **Result**: You get a clean list of high-value handles in `results/`.

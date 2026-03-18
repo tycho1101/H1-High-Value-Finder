@@ -15,3 +15,20 @@ It crawls your entire H1 inventory (Public/Private) and filters targets based on
    ```bash
    python h1_downloader.py
 4. **Result**: You get a clean list of high-value handles in `results/`.
+
+
+## ⚖️ Legal & Disclaimer
+
+**This tool is for educational and ethical security research purposes only.**
+
+By using this software, you agree to the following terms:
+
+1. **Compliance:** You are solely responsible for complying with [HackerOne's Terms of Service](https://www.hackerone.com/terms) and any applicable local or international laws.
+2. **Authorized Access Only:** You must only use this script with your own authenticated session credentials. Use of this tool to access data without authorization is strictly prohibited.
+3. **No Warranty:** This software is provided "as is" without warranty of any kind. The author is not responsible for any consequences resulting from the use of this tool, including but not limited to:
+   - Account suspension or termination by HackerOne.
+   - IP rate-limiting or blacklisting.
+   - Data loss or leakage caused by improper handling of session credentials.
+4. **Credential Security:** **NEVER** hardcode your `Cookie` or `X-Csrf-Token` directly into the source code when committing to public repositories. Always use environment variables or a protected `.env` file.
+
+**Use this tool responsibly. Focus on the hunt, respect the platform.**
